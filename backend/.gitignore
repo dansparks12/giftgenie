@@ -26,4 +26,4 @@ package-lock.json
 !/mobile/giftgenie/.env.example
 
 # SQLite (if ever used)
-*.sqlite
+*.sqlitecp backend/.env backend/.env.example

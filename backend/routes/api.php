@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AIHealthController;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\PersonAttributeController;
+use App\Http\Controllers\RecommendationController;
 
 Route::get('/ai/health', [AIHealthController::class, 'test']);
 
@@ -23,4 +24,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/people/{person}/attributes', [PersonAttributeController::class, 'store']);
     Route::put('/people/{person}/attributes/{attribute}', [PersonAttributeController::class, 'update']);
     Route::delete('/people/{person}/attributes/{attribute}', [PersonAttributeController::class, 'destroy']);
+    Route::post('/people/{person}/recommendations', [RecommendationController::class, 'store']);
 });
