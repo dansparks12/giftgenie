@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AIHealthController;
+use App\Http\Controllers\PersonController;
 
 Route::get('/ai/health', [AIHealthController::class, 'test']);
 
@@ -12,4 +13,9 @@ Route::post('/auth/login', [AuthController::class, 'login']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('/auth/logout', [AuthController::class, 'logout']);
     Route::get('/me', [AuthController::class, 'me']);
+    Route::get('/people', [PersonController::class, 'index']);
+    Route::post('/people', [PersonController::class, 'store']);
+    Route::get('/people/{person}', [PersonController::class, 'show']);
+    Route::put('/people/{person}', [PersonController::class, 'update']);
+    Route::delete('/people/{person}', [PersonController::class, 'destroy']);
 });
