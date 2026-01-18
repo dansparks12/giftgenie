@@ -1,0 +1,29 @@
+# OS
+.DS_Store
+
+# Node / Expo
+node_modules/
+npm-debug.log*
+yarn.lock
+package-lock.json
+
+# Expo
+.expo/
+.expo-shared/
+
+# Laravel
+/backend/vendor/
+/backend/node_modules/
+/backend/storage/*.key
+/backend/storage/logs/
+/backend/storage/framework/
+/backend/bootstrap/cache/
+
+# Env files (CRITICAL)
+.env
+.env.*
+!/backend/.env.example
+!/mobile/giftgenie/.env.example
+
+# SQLite (if ever used)
+*.sqlite
